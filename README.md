@@ -46,21 +46,21 @@ Antes de ejecutar los microservicios, asegurarse de tener configurado y ejecutá
 
 > Nota 4: Para acceder a la base de datos MongoDB, utilizar las credenciales `usuario=root` y `contraseña=1234`, con autenticación de tipo SCRAM-SHA-1:
 >
-> ![Mongo](img/mongo.png)
+> ![Conexión a MongoDB](images/mongo.png)
 
 > Nota 5: Para acceder a la documentación de OpenAPI, utilizar los puertos dinámicos de cada microservicio como se muestra a continuación:
 >
-> ![OpenAPI](img/swagger.png)
+> ![OpenAPI](images/swagger.png)
 
 ---
 
 ### Diagrama de microservicios
-   ![Diagrama-microservicios](img/diagrama-microservicios.png)
+   ![Diagrama de microservicios](images/diagrama-microservicios.png)
 
 ---
 
 ### Diagrama de tablas
-![Diagrama-tablas](img/diagrama-tablas.png)
+![Diagrama de tablas](images/diagrama-tablas.png)
 
 --- 
 ### Servicios CRUD 
@@ -417,6 +417,6 @@ microservicio):
 - Se implementaron test unitarios en los microservicios `admin`, `monopatin` y `viaje`.
 - Ubicación de tests en el proyecto (por ejemplo, en el microservicio `viaje`):
 
-![Test](img/test.png)
+![Test](images/test.png)
 
 ---
