@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: gateway
+  config:
+    import: optional:configserver:http://localhost:8081
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3312/auth?createDatabaseIfNotExist=true
+    username: root
+    password: 1234
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    database: mysql

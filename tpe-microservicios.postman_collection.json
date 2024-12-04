@@ -1,0 +1,1654 @@
+{
+	"info": {
+		"_postman_id": "cb2a7083-e1de-4104-9e0c-bc749f5c0475",
+		"name": "tpe-microservicios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30942929"
+	},
+	"item": [
+		{
+			"name": "microservicio-admin",
+			"item": [
+				{
+					"name": "crud",
+					"item": [
+						{
+							"name": "GetAllAdmins",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:57984/api/admins/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "57984",
+									"path": [
+										"api",
+										"admins",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAdminById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:57984/api/admins/id/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "57984",
+									"path": [
+										"api",
+										"admins",
+										"id",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CreateAdmin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Armando\",\r\n    \"apellido\": \"Paredes\",\r\n    \"dni\": \"23456789\",\r\n    \"contrasenia\": \"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:50350/api/admins/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "50350",
+									"path": [
+										"api",
+										"admins",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateAdmin",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Armando\",\r\n    \"apellido\": \"Muebles\",\r\n    \"dni\": \"12345678\",\r\n    \"contrasenia\": \"asdf\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:50350/api/admins/id/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "50350",
+									"path": [
+										"api",
+										"admins",
+										"id",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteAdmin",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:57984/api/admins/id/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "57984",
+									"path": [
+										"api",
+										"admins",
+										"id",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Cambiar estado de cuenta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:58697/api/admins/estado-cuenta/1/estado/false",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "58697",
+							"path": [
+								"api",
+								"admins",
+								"estado-cuenta",
+								"1",
+								"estado",
+								"false"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear monopatín",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"estado\": \"Activo\",\r\n        \"latitud\": 50.712776,\r\n        \"longitud\": -50.005974,\r\n        \"kmRecorridos\": 900.0,\r\n        \"tiempoUso\": 2220.5\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:54361/api/admins/crear-monopatin/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54361",
+							"path": [
+								"api",
+								"admins",
+								"crear-monopatin",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar monopatín",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"estado\": \"Pausado\",\r\n        \"latitud\": 50.712776,\r\n        \"longitud\": -50.005974,\r\n        \"kmRecorridos\": 900.0,\r\n        \"tiempoUso\": 2220.5\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:54361/api/admins/modificar-monopatin/id/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54361",
+							"path": [
+								"api",
+								"admins",
+								"modificar-monopatin",
+								"id",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar monopatín",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"estado\": \"Activo\",\r\n        \"latitud\": 50.712776,\r\n        \"longitud\": -50.005974,\r\n        \"kmRecorridos\": 900\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:54361/api/admins/eliminar-monopatin/id/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "54361",
+							"path": [
+								"api",
+								"admins",
+								"eliminar-monopatin",
+								"id",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear parada",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"nombre\": \"NUEVA PARADA\",\r\n        \"latitud\": 5.5,\r\n        \"longitud\": 189.6,\r\n        \"cantMaxMonopatin\": 10\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:57080/api/admins/crear-parada/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "57080",
+							"path": [
+								"api",
+								"admins",
+								"crear-parada",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar parada",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"nombre\": \"PARADA 1\",\r\n        \"latitud\": 10.5,\r\n        \"longitud\": 20.6,\r\n        \"cantMaxMonopatin\": 25\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:57080/api/admins/modificar-parada/id/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "57080",
+							"path": [
+								"api",
+								"admins",
+								"modificar-parada",
+								"id",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar parada",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:57080/api/admins/eliminar-parada/id/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "57080",
+							"path": [
+								"api",
+								"admins",
+								"eliminar-parada",
+								"id",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar tarifa normal",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nuevoValor\": 1500.0,\r\n    \"fechaActualizacion\": \"2024-11-10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:57607/api/admins/modificar-tarifa-normal/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "57607",
+							"path": [
+								"api",
+								"admins",
+								"modificar-tarifa-normal",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar tarifa extra",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nuevoValor\": 2000.0,\r\n    \"fechaActualizacion\": \"2024-11-10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:57607/api/admins/modificar-tarifa-extra/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "57607",
+							"path": [
+								"api",
+								"admins",
+								"modificar-tarifa-extra",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cantidad de monopatines por estado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:64195/api/admins/monopatines/cantidad-estado",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64195",
+							"path": [
+								"api",
+								"admins",
+								"monopatines",
+								"cantidad-estado"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Monopatines con más de X viajes en X año",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:64195/api/admins/cant-monopatines/cant-viajes/3/anio/2024",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64195",
+							"path": [
+								"api",
+								"admins",
+								"cant-monopatines",
+								"cant-viajes",
+								"3",
+								"anio",
+								"2024"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener total facturado en un rango de meses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:64195/api/admins/total-facturado?anio=2024&mesInicio=1&mesFin=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64195",
+							"path": [
+								"api",
+								"admins",
+								"total-facturado"
+							],
+							"query": [
+								{
+									"key": "anio",
+									"value": "2024"
+								},
+								{
+									"key": "mesInicio",
+									"value": "1"
+								},
+								{
+									"key": "mesFin",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "microservicio-cliente",
+			"item": [
+				{
+					"name": "microservicio-cuenta",
+					"item": [
+						{
+							"name": "crud",
+							"item": [
+								{
+									"name": "GetAllCuentas",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:57526/api/cuentas/",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "57526",
+											"path": [
+												"api",
+												"cuentas",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetCuentaById",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:57526/api/cuentas/id/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "57526",
+											"path": [
+												"api",
+												"cuentas",
+												"id",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "CreateCuenta",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"tarifa\": 12345,\r\n    \"fechaAlta\": \"2000-01-07\",\r\n    \"saldo\": 2234\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:57526/api/cuentas/",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "57526",
+											"path": [
+												"api",
+												"cuentas",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "UpdateCuenta",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"tarifa\": 35002.5,\r\n    \"fechaAlta\": \"2000-01-07\",\r\n    \"saldo\": 20000.0,\r\n    \"habilitada\": true\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:50994/api/cuentas/id/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "50994",
+											"path": [
+												"api",
+												"cuentas",
+												"id",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "DeleteCuenta",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:50994/api/cuentas/id/2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "50994",
+											"path": [
+												"api",
+												"cuentas",
+												"id",
+												"2"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "microservicio-usuario",
+					"item": [
+						{
+							"name": "crud",
+							"item": [
+								{
+									"name": "GetAllUsuarios",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:57526/api/usuarios/",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "57526",
+											"path": [
+												"api",
+												"usuarios",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GetUsuarioById",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:57526/api/usuarios/id/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "57526",
+											"path": [
+												"api",
+												"usuarios",
+												"id",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "CreateUsuario",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"nombreUsuario\": \"pedro\",\r\n    \"nombre\": \"Pedro\",\r\n    \"apellido\": \"Perez\",\r\n    \"nroCelular\": \"1133334444\",\r\n    \"email\": \"pedroperez@mail.com\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:62590/api/usuarios/",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "62590",
+											"path": [
+												"api",
+												"usuarios",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "UpdateUsuario",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"nombreUsuario\": \"pablito\",\r\n    \"nombre\": \"Pablo\",\r\n    \"apellido\": \"Gómez\",\r\n    \"nroCelular\": \"1155556666\",\r\n    \"email\": \"pablogomez@mail.com\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:62590/api/usuarios/id/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "62590",
+											"path": [
+												"api",
+												"usuarios",
+												"id",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "DeleteUsuario",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:57526/api/usuarios/id/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "57526",
+											"path": [
+												"api",
+												"usuarios",
+												"id",
+												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Buscar monopatines cercanos",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"latitud\": 120.0,\r\n    \"longitud\": 150.0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:56534/api/usuarios/monopatines-cercanos?latitud=100&longitud=120",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "56534",
+									"path": [
+										"api",
+										"usuarios",
+										"monopatines-cercanos"
+									],
+									"query": [
+										{
+											"key": "latitud",
+											"value": "100"
+										},
+										{
+											"key": "longitud",
+											"value": "120"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "microservicio-mantenimiento",
+			"item": [
+				{
+					"name": "crud",
+					"item": [
+						{
+							"name": "GetAllMantenimientos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:53864/api/mantenimientos/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "53864",
+									"path": [
+										"api",
+										"mantenimientos",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetMantenimientoById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:53864/api/mantenimientos/id/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "53864",
+									"path": [
+										"api",
+										"mantenimientos",
+										"id",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CreateMantenimiento",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"inicio\": \"2024-10-20\",\r\n    \"fin\": \"2024-11-25\",\r\n    \"descripcion\": \"Se cambió la batería\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:53864/api/mantenimientos/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "53864",
+									"path": [
+										"api",
+										"mantenimientos",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateMonopatin",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"inicio\": \"2024-10-20\",\r\n    \"fin\": \"2024-11-25\",\r\n    \"descripcion\": \"Se arregló el velocímetro\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:53864/api/mantenimientos/id/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "53864",
+									"path": [
+										"api",
+										"mantenimientos",
+										"id",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteMantenimiento",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:53864/api/mantenimientos/id/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "53864",
+									"path": [
+										"api",
+										"mantenimientos",
+										"id",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Iniciar mantenimiento",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:53864/api/mantenimientos/iniciar/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "53864",
+							"path": [
+								"api",
+								"mantenimientos",
+								"iniciar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Finalizar mantenimiento",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:53864/api/mantenimientos/iniciar/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "53864",
+							"path": [
+								"api",
+								"mantenimientos",
+								"iniciar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generar reporte de monopatines",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:64966/api/mantenimientos/monopatines-reporte?incluirPausa=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64966",
+							"path": [
+								"api",
+								"mantenimientos",
+								"monopatines-reporte"
+							],
+							"query": [
+								{
+									"key": "incluirPausa",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "microservicio-monopatin",
+			"item": [
+				{
+					"name": "crud",
+					"item": [
+						{
+							"name": "GetAllMonopatines",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:59620/api/monopatines/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "59620",
+									"path": [
+										"api",
+										"monopatines",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetMonopatinById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:59620/api/monopatines/id/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "59620",
+									"path": [
+										"api",
+										"monopatines",
+										"id",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CreateMonopatin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"estado\": \"Inactivo\",\r\n    \"latitud\": 41.712776,\r\n    \"longitud\": -44.005974,\r\n    \"kmRecorridos\": 1250.5,\r\n    \"tiempoUso\": 2220.5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:59620/api/monopatines/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "59620",
+									"path": [
+										"api",
+										"monopatines",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateMonopatin",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"estado\": \"En mantenimiento\",\r\n    \"latitud\": 122.3,\r\n    \"longitud\": 3434.3,\r\n    \"kmRecorridos\": 22.0,\r\n    \"tiempoUso\": 2.0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:59620/api/monopatines/id/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "59620",
+									"path": [
+										"api",
+										"monopatines",
+										"id",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteMonopatin",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:59620/api/monopatines/id/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "59620",
+									"path": [
+										"api",
+										"monopatines",
+										"id",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "microservicio-parada",
+			"item": [
+				{
+					"name": "crud",
+					"item": [
+						{
+							"name": "GetAllParadas",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:57596/api/paradas/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "57596",
+									"path": [
+										"api",
+										"paradas",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetParadasById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:57596/api/paradas/id/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "57596",
+									"path": [
+										"api",
+										"paradas",
+										"id",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CreateParada",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Parada F\",\r\n    \"latitud\": 1.0,\r\n    \"longitud\": 123.0,\r\n    \"cantMaxMonopatin\": 20\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:57596/api/paradas/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "57596",
+									"path": [
+										"api",
+										"paradas",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateParada",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Parada A\",\r\n    \"latitud\": 33.0,\r\n    \"longitud\": 63.0,\r\n    \"cantMaxMonopatin\": 12\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:64616/api/paradas/id/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "64616",
+									"path": [
+										"api",
+										"paradas",
+										"id",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteParada",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:64616/api/paradas/id/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "64616",
+									"path": [
+										"api",
+										"paradas",
+										"id",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "microservicio-viaje",
+			"item": [
+				{
+					"name": "crud",
+					"item": [
+						{
+							"name": "GetAllViajes",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:59752/api/viajes/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "59752",
+									"path": [
+										"api",
+										"viajes",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetViajeById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:59752/api/viajes/id/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "59752",
+									"path": [
+										"api",
+										"viajes",
+										"id",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CreateViajes",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"inicio\": \"2024-11-09T14:24:51\",\r\n    \"fin\": \"2024-11-09T23:15:55\",\r\n    \"kmRecorridos\": 12.0,\r\n    \"minPausa\": 5,\r\n    \"maxTiempoPausa\": 23\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:59752/api/viajes/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "59752",
+									"path": [
+										"api",
+										"viajes",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateViaje",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"inicio\": \"2024-11-09T14:23:15\",\r\n    \"fin\": \"2024-11-09T14:23:12\",\r\n    \"kmRecorridos\": 49.0,\r\n    \"minPausa\": 13,\r\n    \"maxTiempoPausa\": 40\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:59752/api/viajes/id/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "59752",
+									"path": [
+										"api",
+										"viajes",
+										"id",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteViajes",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:59752/api/viajes/id/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "59752",
+									"path": [
+										"api",
+										"viajes",
+										"id",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "Autenticación de Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"armando\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2000/api/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"api",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Prueba de permisos para Admins",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcm1hbmRvIiwiYXV0aCI6IkFETUlOIiwiZXhwIjoxNzMxODcyNDY1LCJpYXQiOjE3MzE3ODYwNjV9.YHe2U3V5zHd_isuO2oDxW6UNaFB3uUAii9vYTJDbxnhFYlJlW-dhJ2Zj9oUtJOE_-_TCFHsoVRq91znLItjQOw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2000/api/admins/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"api",
+								"admins",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Autenticación de Mantenimiento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"ricardo\",\r\n    \"password\": \"2345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2000/api/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"api",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Prueba de permisos para Mantenimiento",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyaWNhcmRvIiwiYXV0aCI6Ik1BTlRFTklNSUVOVE8iLCJleHAiOjE3MzE4NzM0MTgsImlhdCI6MTczMTc4NzAxOH0.w6FLAOzVi5_mVTl5pUkUsGTsRh8hKAT066Hc3UHkTMV8xX15l7gs0WxmBwHf4xwexDceLi-WVfq31CTRl3SHdA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2000/api/admins/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"api",
+								"admins",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Autenticación para User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"carla\",\r\n    \"password\": \"3456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2000/api/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"api",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Prueba de permisos para User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjYXJsYSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNzMxODc0MzQxLCJpYXQiOjE3MzE3ODc5NDF9.1DcUrRvRs9alWx0-6eHPXU-nQmwtrTFyqBSogrv6BEyqznw1Ot0Og3GPdvwi5UKzcpvBfcWqKOZSN-6-d1_UUw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2000/api/monopatines/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"api",
+								"monopatines",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
